@@ -2,11 +2,15 @@ require 'sinatra'
 require 'faker'
 
 get "/" do
-    {"msg": "Hello Sinatra", "status": 200}.to_json
+    {
+        "msg": "Hello Sinatra", 
+        "status": 200,
+        "created_by": "Jared Long"
+    }.to_json
 end
 
 get "/ruby/:type" do
-    {"ruby": params["type"], query: params["rails, sinatra"]}.to_json
+    {"ruby": params["type"], "frameworks": "rails, sinatra"}.to_json
 end
 
 get "/route/:param" do
