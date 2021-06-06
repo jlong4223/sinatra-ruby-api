@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'faker'
 
 get "/" do
     {"msg": "Hello Sinatra", "status": 200}.to_json
